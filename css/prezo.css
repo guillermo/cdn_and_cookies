@@ -1,0 +1,118 @@
+/**
+ * Heavily influenced by Hakim El Hattab's work: http://hakim.se/experiments/css3-3d-slideshow
+ */
+
+ #slideshow {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+
+#slideshow > section {
+	width: 880px;
+	height: 880px;
+	padding: 100px;
+
+	position: absolute;
+	overflow: hidden;
+}
+
+#slideshow em {
+	font-style: italic;
+}
+
+#slideshow strong {
+	font-weight: bold;
+}
+
+#slideshow small {
+	font-size: 50%;
+}
+
+#slideshow p, #slideshow blockquote, #slideshow ul, #slideshow ol {
+	margin-bottom: 1em;
+}
+
+#slideshow h1, #slideshow h2, #slideshow th {
+	font-weight: bold;
+}
+
+#slideshow h1, #slideshow h2 {
+  	margin-bottom: .5em;	
+}
+
+#slideshow h1 {
+	font-size: 72px;
+}
+
+#slideshow h2 {
+	font-size: 48px;
+}
+
+#slideshow h1.title {
+	padding-top: 35%;
+}
+
+#slideshow ol, #slideshow ul {
+	list-style-position: outside;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+}
+
+#slideshow ol {
+	list-style-type: decimal;
+}
+
+#slideshow ul {
+	list-style-type: square;
+}
+
+#slideshow ol li, #slideshow ul li {
+	margin-bottom: .5em;
+}
+
+#slideshow blockquote {
+	font-style: italic;
+	line-height: 1.25;
+}
+
+#slideshow blockquote:before {
+	content: "\201C";
+}
+
+#slideshow blockquote:after {
+	content: "\201D";
+}
+
+#slideshow table {
+	font-size: 60%;
+	margin: 0 auto 1em auto;
+}
+
+#slideshow thead {
+	font-weight: bold;
+	border-bottom: 2px solid #000;
+}
+
+#slideshow thead > tr > th {
+	padding-bottom: .2em;
+}
+
+#slideshow tbody > tr:first-child > td {
+	padding-top: .2em;
+}
+
+#slideshow tfoot {
+	font-weight: bold;
+	border-top: 2px solid #000;
+}
+
+#slideshow tfoot > tr > td {
+	padding-top: .2em;
+}
+
+#slideshow tbody > tr:last-child > td {
+	padding-bottom: .2em;
+}

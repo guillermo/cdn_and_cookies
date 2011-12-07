@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, height=device-height, maximum-scale=1.0, minimum-scale=1.0" />
+
+		<title>HTML5 Games for the Real World</title>
+		<meta name="copyright" content="Jiri Kupiainen" />
+
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/prezo.css" />
+		<link rel="stylesheet" media="screen" href="css/prezo_screen.css" />
+		<link rel="stylesheet" media="print" href="css/prezo_print.css" />
+
+		<style type="text/css">
+			table.browserShares tr > *:first-child { text-align: left; padding-right: .5em;}
+			table.browserShares tr > *:last-child { text-align: right; }
+
+			#audioFormats tr > td, #audioFormats tr > th { padding-left: .5em; }
+			#audioFormats tr > *:first-child { text-align: left; padding-left: 0; }
+
+			table .fullSupport { color: #080; }
+			table .partialSupport { color: #aa0; }
+			table .noSupport { color: #800; }
+
+			@-webkit-keyframes annoying {
+				0% { -webkit-transform: rotateX(0deg); }
+				25% { -webkit-transform: rotateX(-25deg); }
+				50% { -webkit-transform: rotateX(0deg) translate3d(0, 0, 100px); }
+				75% { -webkit-transform: rotateX(25deg); }
+				100% { -webkit-transform: rotateX(0deg); }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="slideshow" style="">
+			<section>
+				<h1 class="title">CDNS
+				<strong>&</strong>
+				Cookies
+			</section>
+
+			<section>
+      <h1><b>Set-Cookie HTTP Heaher</b> (rfc 2109)</h1>
+
+      <dl>
+      <pre style="font-size: 50%; text-align: left !important; font-family: courier;">
+set-cookie =  "Set-Cookie:" cookies
+cookies    =  1#cookie
+cookie     =  NAME "=" VALUE *(";" cookie-av)
+NAME       =  attr
+VALUE      =  value
+cookie-av  =  "Comment" "=" value
+           |  "Domain" "=" value
+           |  "Max-Age" "=" value
+           |  "Path" "=" value
+           |  "Secure"
+           |  "Version" "=" 1*DIGIT
+
+</pre>
+				<p></p>
+			</section>
+
+			<section>
+				<h1>Domain=domain</h1>
+        <p>
+          Optional.  The Domain attribute specifies the domain for which the cookie is valid.  An explicitly specified domain must always start with a dot.
+        </p>
+			</section>
+
+			<section>
+				<h1>Domain=domain</h1>
+        <p>
+           Domain Defaults to the request-host.  (Note that there is no dot at the beginning of request-host.)
+        </p>
+			</section>
+			<section>
+				<h1>domain-match</h1>
+        <ol>
+          <li><em>x.y.com</em> domain-matches <em>.y.com</em> but not <em>y.com.</em>
+          <li><em>.y.com</em> domain-matches <em>.x.y.com</em>
+
+			</section>
+
+
+			<section>
+				<h1>How this affect to us</h1>
+        <p><img src="img/ga.png"></p>
+			</section>
+
+			<section>
+				<h1>Domains</h1>
+				<ul>
+					<li>mli.wooga.com</li>
+					<li>cdn-mli.wooga.com</li>
+					<li>www.wooga.com</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>Problems</h1>
+        <ol>
+          <li>A cookie in www.wooga.com manually set to .wooga.com</li>
+          <li>A request to cdn.game.wooga.com will be sent a cookie header on every request</li>
+        </ol>
+			</section>
+
+			<section>
+        <h1>Solution</h1>
+        <ol>
+          <li>Use different top-level domain for cdn</li>
+          <li>Use different top-level domain game (and delegate responsability to each game)</li>
+          <li>Just take care</li>
+			</section>
+
+		</div>
+		<script src="js/prezo.js"></script>
+
+                <!-- Google Analytics -->
+                <script type="text/javascript">
+                        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                        try {
+                                var pageTracker = _gat._getTracker("UA-1653645-1");
+                                pageTracker._trackPageview();
+                        } catch(err) {}
+                </script>
+	</body>
+</html>
